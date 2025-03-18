@@ -36,13 +36,13 @@ const data = [
 ];
 
     const [playlist, setPlaylist] = useState(data);
-    
-return (
-    <>
+
+    return (
+        <>
         <h1>K-POP 플레이 리스트</h1>
         <Main data={data} playlist={playlist} setPlaylist={setPlaylist} />
-    </>
-);
+        </>
+    );
 
 
 // cerateContext()를 사용하여 context 객체 생성
