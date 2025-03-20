@@ -5,7 +5,7 @@ function LoginForm() {
   const [ id, setId ] = useState('');
   const [ password, setPassword] = useState('');
 
-  const { state, dispatch } = useContext(Context);
+  const { state, dispatch } = useContext(Context);    // userContext(Context)의 리턴값은 객체입니다. {} not []
 
   const userInfo = {
     id: 'react',
@@ -41,7 +41,11 @@ function LoginForm() {
       placeholder="비밀번호(PASSWORD)를 입력하세요 :"
       onClick={(event) => setPassword(event.target.value)}
       />
-    
+    <br />
+    <br />
+    <button>Sign In</button>
+    <br />
+    <p>{state.message}</p>
     </form>
   );
 }
